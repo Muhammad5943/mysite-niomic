@@ -1,0 +1,25 @@
+{% extends "layouts/main_template.html" %}
+{% block title %}Niomic Django{% endblock %}
+{% block content %}
+    <h1>Hello we're learn about Django today</h1>
+    <p>Today wi'll discuss about {{data}}</p>
+    <p>Your score is {{score}}</p>
+
+    It means 
+
+    {% if score < 50 %}
+    Bad!
+    
+    {% elif score > 50 %}
+    Good!
+    {% else %}
+    Nice Try
+
+    {% endif %}
+
+    {% for day in days_of_week %}
+    <p>
+        {{day}}
+    </p>
+    {% endfor %}
+{% endblock %}
